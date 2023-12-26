@@ -1,0 +1,97 @@
+[project]
+name = "src"
+version = "v1.0"
+description = "Test task for Aviasales."
+authors = [{name = "Amin Abbasov", email = "aminabbasov@proton.me"}]
+readme = "README.md"
+requires-python = ">= 3.12"
+dependencies = [
+  "fastapi",
+  "uvicorn",
+  "python-multipart",
+
+  "lxml",
+  "pydantic-xml[lxml]",
+]
+
+[project.optional-dependencies]
+dev = [
+  "ipython",
+  
+  "ruff",
+  "mypy",
+
+  "lxml-stubs",
+
+  "httpx",
+
+  "pytest",
+  "pytest-xdist",
+  "pytest-randomly",
+  "pytest-deadfixtures",
+  "pytest-cov",
+]
+
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint]
+select = [
+  # pycodestyle
+  "E",
+  # Pyflakes
+  "F",
+  # pyupgrade
+  "UP",
+  # flake8-bugbear
+  "B",
+  # flake8-simplify
+  "SIM",
+  # isort
+  "I",
+]
+ignore = ["F401"]
+fixable = ["ALL"]
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
+known-first-party = ["src", "core", "api", "tests"]
+section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
+
+
+[tool.mypy]
+mypy_path = "src"
+explicit_package_bases = true
+namespace_packages = true
+ignore_missing_imports = true
+
+
+[tool.pytest.ini_options]
+python_files = "test*.py"
+pythonpath = ". src"
+
+filterwarnings = [
+  "ignore::FutureWarning",  # due to lxml's etree.pyx:1203 warning
+]
+
+markers = [
+  "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+]
+
+
+[tool.coverage.report]
+exclude_lines = [
+  "pragma: no cover",
+  "@abc.abstractmethod",
+  "@abstractmethod",
+  '^\s*\.\.\.',  # to exclude "..."
+  "raise NotImplementedError",
+]

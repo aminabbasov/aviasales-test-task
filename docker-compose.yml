@@ -1,0 +1,25 @@
+version: '3.8'
+name: "aviasales-api"
+
+services:
+
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: server
+    container_name: aviasales-server
+    ports:
+      - 8000:8000  # http://localhost:8000/
+    command: uvicorn main:app --reload --host 0.0.0.0
+    develop:
+      watch:
+        - action: sync
+          path: ./src
+          target: /src
+        - action: rebuild
+          path: requirements.txt
+
+networks:
+  default:
+    name: aviasales-network
