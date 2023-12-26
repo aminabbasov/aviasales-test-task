@@ -7,7 +7,7 @@ This is a web-service using FastAPI with lxml and Docker. Dependencies managed w
 
 ## Description
 
-At first, I planned to create two separate repositories with test tasks for the "Gates team" and the "Assisted team," but during the process, I realized that the differences in requirements are pretty small (in my opinion). Therefore, I decided to merge them into a single solution. And this is the first time me working with FastAPI, Pydantic and lxml, so if I didn't use some of the common best practices, sorry, I just don't know about them. 
+At first, I planned to create two separate repositories with test tasks for the the "[Assisted team](https://github.com/KosyanMedia/test-tasks/tree/master/assisted_team)" and the "[Gates team](https://github.com/KosyanMedia/test-tasks/tree/master/gates_team)" but during the process, I realized that the differences in requirements are pretty small (in my opinion). Therefore, I decided to merge them into a single solution. And this is the first time me working with FastAPI, Pydantic and lxml, so if I didn't use some of the common best practices, sorry, I just don't know about them. 
 
 
 ## Inaccurate requirements
