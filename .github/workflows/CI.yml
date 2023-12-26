@@ -47,11 +47,15 @@ jobs:
           . venv/bin/activate
           make test -e SIMULTANEOUS_TEST_JOBS=${{ steps.cpu-cores.outputs.count }}
   
-      - name: Test & publish code coverage
+      - name: Get coverage XML file
+        run: |
+          . venv/bin/activate
+          make coverage -e SIMULTANEOUS_TEST_JOBS=${{ steps.cpu-cores.outputs.count }}
+
+      - name: Publish code coverage
         uses: paambaati/codeclimate-action@v5.0.0
         env:
           CC_TEST_REPORTER_ID: 8ee335a0583342279062324a7dfebaf7a0543c508b2f31183587c2bc8300cb55
         with:
-          coverageCommand: make coverage
           coverageLocations: |
             ${{github.workspace}}/coverage.xml:coverage.py
