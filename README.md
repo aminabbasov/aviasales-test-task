@@ -1,5 +1,7 @@
 # Aviasales test task
 
+![CI](https://github.com/aminabbasov/aviasales-test-task/actions/workflows/CI.yml/badge.svg) [![Maintainability](https://api.codeclimate.com/v1/badges/7f37e5b2cab5e7bdf685/maintainability)](https://codeclimate.com/github/aminabbasov/aviasales-test-task/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/7f37e5b2cab5e7bdf685/test_coverage)](https://codeclimate.com/github/aminabbasov/aviasales-test-task/test_coverage)
+
 This is a web-service using FastAPI with lxml and Docker. Dependencies managed with [pip-tools](https://github.com/jazzband/pip-tools/). Maintains code quality with [Ruff](https://github.com/astral-sh/ruff). Configured for testing with Pytest.
 
 

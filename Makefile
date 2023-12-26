@@ -25,3 +25,6 @@ lint:
 test:
 	pytest -n ${SIMULTANEOUS_TEST_JOBS} --cov=. --ff --cov-report=term-missing
 	pytest --dead-fixtures
+
+coverage:
+	pytest -n ${SIMULTANEOUS_TEST_JOBS} --cov=. --cov-report=xml --cov-append
