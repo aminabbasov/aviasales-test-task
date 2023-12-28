@@ -24,7 +24,7 @@ colorama==0.4.6
     #   click
     #   ipython
     #   pytest
-coverage[toml]==7.3.4
+coverage[toml]==7.4.0
     # via
     #   coverage
     #   pytest-cov
