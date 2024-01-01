@@ -20,7 +20,7 @@ h11==0.14.0
     # via uvicorn
 idna==3.6
     # via anyio
-lxml==4.9.4
+lxml==5.0.0
     # via
     #   pydantic-xml
     #   src (pyproject.toml)
