@@ -54,7 +54,7 @@ ipython==8.19.0
     # via src (pyproject.toml)
 jedi==0.19.1
     # via ipython
-lxml==4.9.4
+lxml==5.0.1
     # via
     #   pydantic-xml
     #   src (pyproject.toml)
