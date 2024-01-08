@@ -127,5 +127,5 @@ typing-extensions==4.9.0
     #   pydantic-core
 uvicorn==0.25.0
     # via src (pyproject.toml)
-wcwidth==0.2.12
+wcwidth==0.2.13
     # via prompt-toolkit
