@@ -34,7 +34,7 @@ execnet==2.0.2
     # via pytest-xdist
 executing==2.0.1
     # via stack-data
-fastapi==0.106.0
+fastapi==0.109.0
     # via src (pyproject.toml)
 h11==0.14.0
     # via
