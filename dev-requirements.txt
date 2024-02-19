@@ -86,7 +86,7 @@ pydantic-xml[lxml]==2.7.0
     # via src (pyproject.toml)
 pygments==2.17.2
     # via ipython
-pytest==7.4.3
+pytest==8.0.1
     # via
     #   pytest-cov
     #   pytest-deadfixtures
