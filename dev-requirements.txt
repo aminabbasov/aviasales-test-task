@@ -103,7 +103,7 @@ pytest-xdist==3.5.0
     # via src (pyproject.toml)
 python-multipart==0.0.6
     # via src (pyproject.toml)
-ruff==0.1.9
+ruff==0.2.2
     # via src (pyproject.toml)
 six==1.16.0
     # via asttokens
