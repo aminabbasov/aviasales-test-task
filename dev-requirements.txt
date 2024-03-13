@@ -115,7 +115,7 @@ stack-data==0.6.3
     # via ipython
 starlette==0.27.0
     # via fastapi
-traitlets==5.14.0
+traitlets==5.14.2
     # via
     #   ipython
     #   matplotlib-inline
